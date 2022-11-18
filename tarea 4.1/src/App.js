@@ -1,4 +1,5 @@
-//import './App.css';
+import './App.css';
+import React, {useState} from 'react';
 import {TodoCounter} from "./TodoCounter";
 import {TodoSearch} from "./TodoSearch";
 import { TodoList } from "./TodoList";
@@ -6,28 +7,42 @@ import { TodoItem } from "./TodoItem";
 import { CreateTodoButton} from "./CreateTodoButton"
 
 const todos = [
-  {description:'Cortar Cebolla', completed: false},
-  {description:'Tomar el curso de introduccion a React', completed: false},
-  {description:'Llorar con la llorona', completed: false},
-  {description:'Testing', completed: false},
+  {description:'Aprender React', completed: false},
+  {description:'Aprender Angular', completed: false},
+  {description:'Aprender Vue', completed: true},
+  {description:'Aprender a Cocinar', completed: false},
 ]
 
 
-
 function App() {
+  const [search, setSearch] = useState('');  
+  const totalTodos =todos.length
+  const onCompletedTodos = todos.filter(todo => !!todo.completed).length;
   return (
     <>
-      <TodoCounter/>
-        
-     <TodoSearch/>
-      
-      <TodoList>
+  <div className="TodoApps1" >
+  <br></br>
+  <br></br>
+    <TodoCounter total = {totalTodos} completed = {onCompletedTodos}/>  
+    <TodoSearch search={search} setSearch={setSearch}/>
+    <TodoList>
         {todos.map((todo) =>(
           <TodoItem key={todo.description} text={todo.description}/>
         ))}
         
       </TodoList>
       <CreateTodoButton/>
+    
+  </div>
+
+
+  
+    
+    
+
+
+   
+   
    </>
   );
 }

@@ -6,17 +6,21 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(43, 0, 255);
-    height: 20vh;
+    height: 15vh;
     margin: 1%;
-    border-radius: 5%;
+    border-radius: 1%;
+    width: 80%;
+    margin-left: 1em;
     
 
 }
 
 .items{
-    column-count: 3;
-    text-align: right;
+    column-count: 2;
+    text-align: center;
     column-fill:auto ;
+    
+
 }
 
 
