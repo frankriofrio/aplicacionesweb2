@@ -1,0 +1,26 @@
+.TodoItem{
+    color: rgb(245, 241, 249);
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 0, 255);
+    height: 15vh;
+    margin: 1%;
+    border-radius: 1%;
+    width: 80%;
+    margin-left: 1em;
+    
+
+}
+
+.items{
+    column-count: 2;
+    text-align: center;
+    column-fill:auto ;
+    
+
+}
+
+
